@@ -2,23 +2,23 @@ let mainTaskContainerEl = document.getElementById("main-task-container");
 let userInputElement = document.getElementById("userInput");
 let errMsgElement = document.getElementById("errMsg");
 
-let todoList = [
-    {
-        text:"Think English sentence all the time",
-        uniqueId: 1,
-        isChecked:false
-    },
-    {
-        text:"Learn Driving",
-        uniqueId: 2,
-        isChecked:false
-    },
-    {
-        text:"Start preparing for the Interview",
-        uniqueId: 3,
-        isChecked:false
-    }
-];
+// let todoList = [
+//     {
+//         text:"Think English sentence all the time",
+//         uniqueId: 1,
+//         isChecked:false
+//     },
+//     {
+//         text:"Learn Driving",
+//         uniqueId: 2,
+//         isChecked:false
+//     },
+//     {
+//         text:"Start preparing for the Interview",
+//         uniqueId: 3,
+//         isChecked:false
+//     }
+// ];
 // localStorage.removeItem("todoList");
 function getTodoListFromLocalStorage(){
     let stringifiedTodoList = localStorage.getItem("todoList");
@@ -139,9 +139,9 @@ function createAndAppendTodo(todo){
     labelEl.setAttribute("for", checkboxId);
     labelEl.textContent = todo.text;
     labelEl.id = labelId;
-    if(todo.isChecked===true)[
+    if(todo.isChecked===true){
         labelEl.classList.add("strike")
-    ]
+    }
     checkBoxLabelContainerEl.appendChild(labelEl);
     
 
